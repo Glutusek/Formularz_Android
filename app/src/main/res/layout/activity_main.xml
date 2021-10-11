@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Formularz"
+        android:layout_above="@id/nameLayout"
+        android:textSize="50sp"
+        android:textAlignment="center" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginTop="5dp"
+        android:id="@+id/nameLayout"
+        android:layout_above="@id/nameError">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:text="Imię"
+            android:textSize="30sp"
+            android:textAlignment="center"/>
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:id="@+id/name"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:id="@+id/nameError"
+        android:layout_marginHorizontal="50dp"
+        android:layout_above="@id/mailLayout"
+        android:textColor="#F00"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginTop="5dp"
+        android:id="@+id/mailLayout"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:text="Mail"
+            android:textSize="30sp"
+            android:textAlignment="center"/>
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:id="@+id/mail"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:id="@+id/mailError"
+        android:layout_below="@id/mailLayout"
+        android:layout_marginHorizontal="50dp"
+        android:textAlignment="center"
+        android:textColor="#F00"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginTop="5dp"
+        android:id="@+id/phoneLayout"
+        android:layout_below="@id/mailError">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:text="Telefon"
+            android:textSize="30sp"
+            android:textAlignment="center"/>
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:id="@+id/phone"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:id="@+id/phoneError"
+        android:layout_below="@id/phoneLayout"
+        android:layout_marginHorizontal="50dp"
+        android:textAlignment="center"
+        android:textColor="#F00"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/phoneError"
+        android:text="Wyślij"
+        android:layout_centerHorizontal="true"
+        android:onClick="formCheck"/>
+
+</RelativeLayout>
